@@ -1,0 +1,5 @@
+xscreensaver.mode: blank
+*foreground: rgb:ff/ff/ff
+*background: rgb:00/00/00
+xterm*faceName: Monospace
+xterm*faceSize: 14
