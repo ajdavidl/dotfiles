@@ -1,7 +1,7 @@
 from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 from os import listdir
@@ -132,6 +132,22 @@ for i in groups:
         # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
         #     desc="move focused window to group {}".format(i.name)),
     ])
+
+# Append scratchpad with dropdowns to groups
+groups.append(ScratchPad('scratchpad', [
+    DropDown('terminal', "alacritty", width=0.8, height=0.8, x=0.1, y=0.1, opacity=0.9),
+    DropDown('text_editor', "alacritty -e vim", width=0.8, height=0.8, x=0.1, y=0.1, opacity=0.9),
+    DropDown('file_manager', "alacritty -e ranger", width=0.8, height=0.8, x=0.1, y=0.1, opacity=0.9),
+    DropDown('process_viewer', "alacritty -e htop", width=0.8, height=0.8, x=0.1, y=0.1, opacity=0.9),
+]))
+# extend keys list with keybinding for scratchpad
+keys.extend([
+    Key([mod, "control"], "Return", lazy.group['scratchpad'].dropdown_toggle('terminal')),
+    Key([mod, "control"], "v", lazy.group['scratchpad'].dropdown_toggle('text_editor')),
+    Key([mod, "control"], "e", lazy.group['scratchpad'].dropdown_toggle('file_manager')),
+    Key([mod, "control"], "h", lazy.group['scratchpad'].dropdown_toggle('process_viewer')),
+])  
+
 
 layouts = [
     layout.Columns(border_focus_stack='#d75f5f'),
