@@ -84,8 +84,9 @@ keys = [
     Key([mod], "o", lazy.spawn("libreoffice")),
     Key([mod], "p", lazy.spawn("alacritty -e ipython")),
     Key([mod, "shift"], "p", lazy.spawn("alacritty -e python")),
-    #Key([mod], "a", lazy.spawn("")),
+    Key([mod], "a", lazy.spawn("emacs")),
     Key([mod], "s", lazy.spawn("alacritty -e setxkbmap -model abnt -layout us -variant intl")),
+    Key([mod, "shift"], "s", lazy.spawn("alacritty -e setxkbmap -model abnt -layout brmine -variant hall2")),
     Key([mod], "d", lazy.spawn("alacritty -e setxkbmap -model abnt -layout br -variant dvorak")),
     Key([mod, "shift"], "d", lazy.spawn("alacritty -e setxkbmap -model abnt -layout us -variant dvorak")),
     Key([mod], "f", lazy.spawn("firefox")),
@@ -96,14 +97,15 @@ keys = [
 	Key([mod], "k", lazy.spawn("alacritty -e keepass")),
 	Key([mod], "l", lazy.spawn("xscreensaver-command -lock")),
 	Key([mod,"shift"], "l", lazy.spawn("xscreensaver -no-splash")),
-	Key([mod], "x", lazy.spawn("alacritty -e sudo xmrig")),
-	Key([mod, "shift"], "x", lazy.spawn("xterm")),
+	#Key([mod, "shift"], "x", lazy.spawn("alacritty -e sudo xmrig")),
+	Key([mod], "x", lazy.spawn("xterm")),
     Key([mod], "c", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     #Key([mod, "shift"], "c", lazy.spawn("alacritty -e cal -y ; sleep 1200")),
 	Key([mod, "shift"], "c", lazy.spawn("alacritty -e calibre")),
     Key([mod], "v", lazy.spawn("vscodium")),
 	Key([mod], "b", lazy.spawn("brave")),
 	Key([mod], "n", lazy.spawn("notepadqq")),
+	Key([mod, "shift"], "n", lazy.spawn("kwrite")),
 	Key([mod], "m", lazy.spawn("alacritty -e xrandr --output eDP1 --auto --output HDMI-1-0 --auto --right-of eDP1")),
     Key([mod], "z", lazy.spawn("vlc")),
 
@@ -114,7 +116,7 @@ keys = [
 
 ]
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in "1234567890"]
 
 for i in groups:
     keys.extend([
