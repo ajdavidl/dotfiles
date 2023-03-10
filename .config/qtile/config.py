@@ -7,6 +7,23 @@ from libqtile.utils import guess_terminal
 from os import listdir
 from random import sample
 
+import colors
+
+mbfs = colors.mbfs()
+doomOne = colors.doomOne()
+dracula = colors.dracula()
+everforest = colors.everforest()
+nord = colors.nord()
+gruvbox = colors.gruvbox()
+
+
+#Choose colorscheme
+colorscheme = doomOne
+
+#Colorschme funcstion
+colors, backgroundColor, foregroundColor, workspaceColor, foregroundColorTwo = colorscheme
+
+
 image_path = "/home/usuario/Imagens/dark_wallpapers/"
 lista_wallpapers = listdir(image_path)
 wallpaper_path1 = image_path+sample(lista_wallpapers, k = 1)[0]
@@ -182,130 +199,130 @@ screens = [
                 widget.WindowName(),
                 widget.Chord(
                     chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
+                        'launch': ("#ff0000", foregroundColor),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.CurrentLayout(
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        padding = 5),
                 widget.TextBox(text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37),
-                widget.TextBox("Comandos: &lt;M-c&gt;", foreground="#ffffff"),
+                widget.TextBox("Comandos: &lt;M-c&gt;", foreground=foregroundColor),
                 widget.Systray(),
                 widget.TextBox(
                        text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37),
 				widget.Net(interface = "enp59s0",
                     format = '{down} ↓↑ {up}',
-                    foreground = "ffffff",
-                    background = "000000",
+                    foreground = foregroundColor,
+                    background = backgroundColor,
                     padding = 5),
 				widget.TextBox(
                        text='',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
               widget.TextBox(
                        text = " ⟳",
                        padding = 2,
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        fontsize = 14
                        ),
               widget.CheckUpdates(
                        update_interval = 1800,
                        distro = "Arch_checkupdates",
                        display_format = "{updates} Updates",
-                       foreground = "ffffff",
+                       foreground = foregroundColor,
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('alacritty -e sudo pacman -Syu')},
-                       background = "000000"
+                       background = backgroundColor
                        ),
               widget.TextBox(
                        text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
               widget.TextBox(
                        text = " 🖬",
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        padding = 0,
                        fontsize = 14
                        ),
               widget.Memory(
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('alacritty -e htop')},
                        padding = 5
                        ),
               widget.TextBox(
                        text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
               widget.CPU(
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 0",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 1",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 2",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 3",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 4",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 5",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ), 
               widget.TextBox(
                        text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
               widget.Battery(
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.TextBox(
                        text='',
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
@@ -327,107 +344,107 @@ screens = [
                 widget.WindowName(),
                 widget.Chord(
                     chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
+                        'launch': ("#ff0000", foregroundColor),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.CurrentLayout(
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        padding = 5),
                 widget.TextBox(text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37),
-                widget.TextBox("Comandos: &lt;M-c&gt;", foreground="#ffffff"),
+                widget.TextBox("Comandos: &lt;M-c&gt;", foreground=foregroundColor),
                 widget.TextBox(
                        text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37),
 				widget.Net(interface = "enp59s0",
                     format = '{down} ↓↑ {up}',
-                    foreground = "ffffff",
-                    background = "000000",
+                    foreground = foregroundColor,
+                    background = backgroundColor,
                     padding = 5),
 				widget.TextBox(
                        text='',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
               widget.TextBox(
                        text = " 🖬",
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        padding = 0,
                        fontsize = 14
                        ),
               widget.Memory(
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('alacritty -e htop')},
                        padding = 5
                        ),
               widget.TextBox(
                        text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
               widget.CPU(
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 0",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 1",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 2",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 3",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 4",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 5",
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ), 
               widget.TextBox(
                        text = '',
-                       background = "ffffff",
-                       foreground = "000000",
+                       background = foregroundColor,
+                       foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
               widget.Battery(
-                       foreground = "ffffff",
-                       background = "000000" 
+                       foreground = foregroundColor,
+                       background = backgroundColor 
                       ),
               widget.TextBox(
                        text='',
-                       foreground = "ffffff",
-                       background = "000000",
+                       foreground = foregroundColor,
+                       background = backgroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
