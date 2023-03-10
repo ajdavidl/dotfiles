@@ -1,8 +1,9 @@
 :set number
 :set relativenumber
 :set autoindent
-syntax on
-colorscheme default
+syntax enable
+set background=dark
+colorscheme solarized
 :set tabstop=4
 :set mouse=a
 :set shiftwidth=4
