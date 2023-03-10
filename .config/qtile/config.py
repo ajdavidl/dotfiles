@@ -130,6 +130,9 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume 0 +5dB")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume 0 -5dB")),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute 0 toggle")),
+    
+    #Rofi
+    Key([mod, "shift"], "Return", lazy.spawn("rofi -show run"), desc = "Launch primary launcher"),
 
 ]
 
