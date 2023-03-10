@@ -38,10 +38,14 @@ endif
 call plug#begin()
 
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'https://github.com/preservim/nerdtree' " nerdtree
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
+
+" airline
+let g:airline_theme='solarized'
 
 " coc config
  let g:coc_global_extensions = [
