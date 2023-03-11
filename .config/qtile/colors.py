@@ -122,3 +122,21 @@ def gruvbox():
 	foregroundColorTwo = "#928375"
 	return colors, backgroundColor, foregroundColor, workspaceColor, foregroundColorTwo
 
+#Solarized Dark
+def solarized_dark():
+	colors = [["#073642", "#002b36"],  #background [0]
+			   ["#eee8d5", "#fdf6e3"],  #foreground (white) [1]
+			   ["#268bd2", "#839496"],  #blue [2]
+			   ["#2aa198", "#93a1a1"],  #cyan [3]
+			   ["#859900", "#586e75"],  #green [4]
+			   ["#d33682", "#6c71c4"],  #magenta [5]
+			   ["#dc322f", "#cb4b16"],  #red [6]
+			   ["#b58900", "#657b83"]]  #yellow [7]
+			   
+	backgroundColor = "#002b36"
+	foregroundColor = "#eee8d5"
+	workspaceColor = "#859900"
+	foregroundColorTwo = "#839496"
+	return colors, backgroundColor, foregroundColor, workspaceColor, foregroundColorTwo
+
+

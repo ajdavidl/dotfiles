@@ -15,10 +15,11 @@ dracula = colors.dracula()
 everforest = colors.everforest()
 nord = colors.nord()
 gruvbox = colors.gruvbox()
+solarized = colors.solarized_dark()
 
 
 #Choose colorscheme
-colorscheme = doomOne
+colorscheme = nord
 
 #Colorschme funcstion
 colors, backgroundColor, foregroundColor, workspaceColor, foregroundColorTwo = colorscheme
@@ -111,7 +112,7 @@ keys = [
 	Key([mod], "h", lazy.spawn("alacritty -e htop")),
 	Key([mod], "j", lazy.spawn("alacritty -e jupyter lab")),
 	Key([mod, "shift"], "j", lazy.spawn("alacritty -e julia")),
-	Key([mod], "k", lazy.spawn("alacritty -e keepass")),
+	Key([mod], "k", lazy.spawn("alacritty -e keepassxc")),
 	Key([mod], "l", lazy.spawn("xscreensaver-command -lock")),
 	Key([mod,"shift"], "l", lazy.spawn("xscreensaver -no-splash")),
 	#Key([mod, "shift"], "x", lazy.spawn("alacritty -e sudo xmrig")),
@@ -215,7 +216,7 @@ screens = [
                        foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37),
-                widget.TextBox("Comandos: &lt;M-c&gt;", foreground=foregroundColor),
+                widget.TextBox("Comandos: &lt;M-c&gt;", foreground=foregroundColor,background=backgroundColor),
                 widget.Systray(),
                 widget.TextBox(
                        text = '',
