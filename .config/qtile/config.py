@@ -19,7 +19,7 @@ solarized = colors.solarized_dark()
 
 
 #Choose colorscheme
-colorscheme = nord
+colorscheme = solarized
 
 #Colorschme funcstion
 colors, backgroundColor, foregroundColor, workspaceColor, foregroundColorTwo = colorscheme
@@ -197,20 +197,28 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
+                widget.CurrentLayout(
+                    foreground = foregroundColor,
+                    background = backgroundColor
+                    ),
+                widget.GroupBox(
+                    foreground = foregroundColor,
+                    background = backgroundColor
+                    ),
+                widget.Prompt(
+                    foreground = foregroundColor,
+                    background = backgroundColor
+                    ),
+                widget.WindowName(
+                    foreground = foregroundColor,
+                    background = backgroundColor
+                    ),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", foregroundColor),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.CurrentLayout(
-                       foreground = foregroundColor,
-                       background = backgroundColor,
-                       padding = 5),
                 widget.TextBox(text = '',
                        background = foregroundColor,
                        foreground = backgroundColor,
@@ -330,8 +338,14 @@ screens = [
                        padding = 0,
                        fontsize = 37
                        ),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.QuickExit(),
+                widget.Clock(format='%Y-%m-%d %a %I:%M %p',
+                       foreground = foregroundColor,
+                       background = backgroundColor
+                       ),
+                widget.QuickExit(
+                       foreground = foregroundColor,
+                       background = backgroundColor
+                       ),
             ],
             24,
         ),
@@ -342,10 +356,22 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
+                widget.CurrentLayout(
+                    foreground = foregroundColor,
+                    background = backgroundColor
+                ),
+                widget.GroupBox(
+                    foreground = foregroundColor,
+                    background = backgroundColor
+                ),
+                widget.Prompt(
+                    foreground = foregroundColor,
+                    background = backgroundColor
+                ),
+                widget.WindowName(
+                    foreground = foregroundColor,
+                    background = backgroundColor
+                ),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", foregroundColor),
@@ -361,7 +387,9 @@ screens = [
                        foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37),
-                widget.TextBox("Comandos: &lt;M-c&gt;", foreground=foregroundColor),
+                widget.TextBox("Comandos: &lt;M-c&gt;", 
+                       background = foregroundColor,
+                       foreground=foregroundColor),
                 widget.TextBox(
                        text = '',
                        background = foregroundColor,
@@ -452,8 +480,14 @@ screens = [
                        padding = 0,
                        fontsize = 37
                        ),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.QuickExit(),
+                widget.Clock(format='%Y-%m-%d %a %I:%M %p',
+                       foreground = foregroundColor,
+                       background = backgroundColor,
+                       ),
+                widget.QuickExit(
+                       foreground = foregroundColor,
+                       background = backgroundColor,
+                       ),
             ],
             24,
          ),

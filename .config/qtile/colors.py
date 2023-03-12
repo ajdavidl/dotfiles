@@ -133,7 +133,7 @@ def solarized_dark():
 			   ["#dc322f", "#cb4b16"],  #red [6]
 			   ["#b58900", "#657b83"]]  #yellow [7]
 			   
-	backgroundColor = "#002b36"
+	backgroundColor = "#073642"
 	foregroundColor = "#eee8d5"
 	workspaceColor = "#859900"
 	foregroundColorTwo = "#839496"
