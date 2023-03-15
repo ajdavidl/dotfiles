@@ -118,8 +118,8 @@ keys = [
 	#Key([mod, "shift"], "x", lazy.spawn("alacritty -e sudo xmrig")),
 	Key([mod], "x", lazy.spawn("xterm")),
     Key([mod], "c", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    #Key([mod, "shift"], "c", lazy.spawn("alacritty -e cal -y ; sleep 1200")),
-	Key([mod, "shift"], "c", lazy.spawn("alacritty -e calibre")),
+    Key([mod, "shift"], "c", lazy.spawn("alacritty -e calcure")),
+	Key([mod, "control"], "c", lazy.spawn("alacritty -e calibre")),
     Key([mod], "v", lazy.spawn("vscodium")),
 	Key([mod], "b", lazy.spawn("brave")),
 	Key([mod], "n", lazy.spawn("notepadqq")),
@@ -333,8 +333,8 @@ screens = [
                       ),
               widget.TextBox(
                        text='',
-                       foreground = foregroundColor,
-                       background = backgroundColor,
+                       foreground = backgroundColor,
+                       background = foregroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
@@ -388,8 +388,8 @@ screens = [
                        padding = 0,
                        fontsize = 37),
                 widget.TextBox("Comandos: &lt;M-c&gt;", 
-                       background = foregroundColor,
-                       foreground=foregroundColor),
+                       background = backgroundColor,
+                       foreground = foregroundColor),
                 widget.TextBox(
                        text = '',
                        background = foregroundColor,
@@ -475,8 +475,8 @@ screens = [
                       ),
               widget.TextBox(
                        text='',
-                       foreground = foregroundColor,
-                       background = backgroundColor,
+                       foreground = backgroundColor,
+                       background = foregroundColor,
                        padding = 0,
                        fontsize = 37
                        ),
