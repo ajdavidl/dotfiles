@@ -112,7 +112,7 @@ keys = [
 	Key([mod], "h", lazy.spawn("alacritty -e htop")),
 	Key([mod], "j", lazy.spawn("alacritty -e jupyter lab")),
 	Key([mod, "shift"], "j", lazy.spawn("alacritty -e julia")),
-	Key([mod], "k", lazy.spawn("alacritty -e keepassxc")),
+	Key([mod], "k", lazy.spawn("keepassxc")),
 	Key([mod], "l", lazy.spawn("xscreensaver-command -lock")),
 	Key([mod,"shift"], "l", lazy.spawn("xscreensaver -no-splash")),
 	#Key([mod, "shift"], "x", lazy.spawn("alacritty -e sudo xmrig")),
