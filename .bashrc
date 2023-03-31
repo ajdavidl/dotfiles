@@ -2,6 +2,10 @@
 # ~/.bashrc
 #
 
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=5000
+HISTFILESIZE=10000
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
