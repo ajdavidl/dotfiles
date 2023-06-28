@@ -124,7 +124,7 @@ keys = [
 	Key([mod], "b", lazy.spawn("brave")),
 	Key([mod], "n", lazy.spawn("notepadqq")),
 	Key([mod, "shift"], "n", lazy.spawn("kwrite")),
-	Key([mod], "m", lazy.spawn("alacritty -e xrandr --output eDP1 --auto --output HDMI-1-0 --auto --right-of eDP1")),
+	Key([mod], "m", lazy.spawn("alacritty -e xrandr --output eDP-1 --primary --auto --output HDMI-1-0 --auto --right-of eDP-1")),
     Key([mod], "z", lazy.spawn("vlc")),
 
 # Change the volume if your keyboard has special volume keys.
