@@ -123,6 +123,7 @@ keys = [
 	Key([mod, "control"], "c", lazy.spawn("alacritty -e calibre")),
     Key([mod], "v", lazy.spawn("vscodium")),
 	Key([mod], "b", lazy.spawn("brave")),
+	Key([mod, "shift"], "b", lazy.spawn("bibletime")),
 	Key([mod], "n", lazy.spawn("notepadqq")),
 	Key([mod, "shift"], "n", lazy.spawn("kwrite")),
 	Key([mod], "m", lazy.spawn("alacritty -e xrandr --output eDP-1 --primary --auto --output HDMI-1-0 --auto --right-of eDP-1")),
