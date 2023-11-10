@@ -101,6 +101,7 @@ keys = [
     Key([mod], "u", lazy.spawn("alacritty -e sudo pacman -Syu")),
     Key([mod], "i", lazy.spawn("alacritty -e system-config-printer")),
     Key([mod], "o", lazy.spawn("libreoffice")),
+    Key([mod, "shift"], "o", lazy.spawn("okular")),
     Key([mod], "p", lazy.spawn("alacritty -e ipython")),
     Key([mod, "shift"], "p", lazy.spawn("alacritty -e python")),
     Key([mod], "a", lazy.spawn("emacs")),
