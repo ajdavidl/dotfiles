@@ -85,8 +85,9 @@ keys = [
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
 
-    Key([mod], "F11", lazy.spawn("alacritty -e xrandr --output eDP1 --brightness 0.5")),
-    Key([mod], "F12", lazy.spawn("alacritty -e xrandr --output eDP1 --brightness 1")),
+    Key([mod], "F10", lazy.spawn("alacritty -e xrandr --output eDP-1 --brightness 0.8")),
+    Key([mod], "F11", lazy.spawn("alacritty -e xrandr --output eDP-1 --brightness 1")),
+    Key([mod], "F12", lazy.spawn("alacritty -e xrandr --output eDP-1 --brightness 1.2")),
     
     # Start apps
     Key([mod], "q", lazy.spawn("alacritty -e vim .config/qtile/config.py")),
