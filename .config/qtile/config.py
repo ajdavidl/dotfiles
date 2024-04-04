@@ -105,6 +105,7 @@ keys = [
     Key([mod, "shift"], "o", lazy.spawn("okular")),
     Key([mod], "p", lazy.spawn("alacritty -e ipython")),
     Key([mod, "shift"], "p", lazy.spawn("alacritty -e python")),
+	Key([mod, "control"], "p", lazy.spawn('alacritty -e ping 1.1.1.1' )),
     Key([mod], "a", lazy.spawn("emacs")),
     Key([mod], "s", lazy.spawn("alacritty -e setxkbmap -model abnt -layout us -variant intl")),
     Key([mod, "shift"], "s", lazy.spawn("alacritty -e setxkbmap -model abnt -layout brmine -variant hall2")),
