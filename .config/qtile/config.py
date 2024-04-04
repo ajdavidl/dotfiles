@@ -91,7 +91,7 @@ keys = [
     
     # Start apps
     Key([mod], "q", lazy.spawn("alacritty -e vim .config/qtile/config.py")),
-    Key([mod], "w", lazy.spawn('alacritty -e curl wttr.in ; sleep 1200')),
+    Key([mod], "w", lazy.spawn('alacritty --hold -e curl wttr.in')),
 	Key([mod, "control"], "w", lazy.spawn("kweather")),
     Key([mod], "e", lazy.spawn("dolphin")),
 	Key([mod, "shift"], "e", lazy.spawn("alacritty -e ranger")),
