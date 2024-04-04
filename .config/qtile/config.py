@@ -124,6 +124,7 @@ keys = [
     Key([mod], "c", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod, "shift"], "c", lazy.spawn("alacritty -e calcure")),
 	Key([mod, "control"], "c", lazy.spawn("alacritty -e calibre")),
+	Key([mod, "shift", "control"], "c", lazy.spawn('alacritty --hold -e cal -y')),
     Key([mod], "v", lazy.spawn("vscodium")),
 	Key([mod], "b", lazy.spawn("brave")),
 	Key([mod, "shift"], "b", lazy.spawn("bibletime")),
