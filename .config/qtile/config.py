@@ -348,10 +348,10 @@ screens = [
                        foreground = foregroundColor,
                        background = backgroundColor
                        ),
-                widget.QuickExit(
-                       foreground = foregroundColor,
-                       background = backgroundColor
-                       ),
+                #widget.QuickExit(
+                #       foreground = foregroundColor,
+                #       background = backgroundColor
+                #       ),
             ],
             24,
         ),
@@ -490,10 +490,10 @@ screens = [
                        foreground = foregroundColor,
                        background = backgroundColor,
                        ),
-                widget.QuickExit(
-                       foreground = foregroundColor,
-                       background = backgroundColor,
-                       ),
+                #widget.QuickExit(
+                #       foreground = foregroundColor,
+                #       background = backgroundColor,
+                #       ),
             ],
             24,
          ),
