@@ -99,7 +99,7 @@ keys = [
 	Key([mod, "shift"], "r", lazy.spawn("alacritty -e R")),
 	Key([mod], "t", lazy.spawn("alacritty -e /home/usuario/Documentos/tor-browser_en-US/Browser/start-tor-browser")),
     Key([mod], "y", lazy.spawn("xmouseless")),
-    Key([mod], "u", lazy.spawn("alacritty -e sudo pacman -Syu")),
+    Key([mod], "u", lazy.spawn("alacritty --hold -e sudo pacman -Syu")),
     Key([mod], "i", lazy.spawn("alacritty -e system-config-printer")),
     Key([mod], "o", lazy.spawn("libreoffice")),
     Key([mod, "shift"], "o", lazy.spawn("okular")),
