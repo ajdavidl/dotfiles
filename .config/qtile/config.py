@@ -75,8 +75,8 @@ keys = [
         desc="Toggle between split and unsplit sides of stack"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
-    Key([mod],"comma", lazy.to_screen(0), desc = "Focus to monitor 0"),
-    Key([mod],"period", lazy.to_screen(1), desc = "Focus to monitor 1"),
+    Key([mod],"comma", lazy.to_screen(1), desc = "Focus to monitor 1"),
+    Key([mod],"period", lazy.to_screen(0), desc = "Focus to monitor 0"),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -130,7 +130,7 @@ keys = [
 	Key([mod, "shift"], "b", lazy.spawn("bibletime")),
 	Key([mod], "n", lazy.spawn("notepadqq")),
 	Key([mod, "shift"], "n", lazy.spawn("kwrite")),
-	Key([mod], "m", lazy.spawn("alacritty -e xrandr --output eDP-1 --primary --auto --output HDMI-1-0 --auto --right-of eDP-1")),
+	Key([mod], "m", lazy.spawn("alacritty -e xrandr --output eDP-1 --primary --auto --output HDMI-1-0 --auto --left-of eDP-1")),
     Key([mod], "z", lazy.spawn("vlc")),
 
 # Change the volume if your keyboard has special volume keys.
