@@ -326,17 +326,17 @@ screens = [
                        foreground = foregroundColor,
                        background = backgroundColor 
                       ), 
-              widget.TextBox(
-                       text = '',
-                       background = foregroundColor,
-                       foreground = backgroundColor,
-                       padding = 0,
-                       fontsize = 37
-                       ),
-              widget.Battery(
-                       foreground = foregroundColor,
-                       background = backgroundColor 
-                      ),
+#              widget.TextBox(
+#                       text = '',
+#                       background = foregroundColor,
+#                       foreground = backgroundColor,
+#                       padding = 0,
+#                       fontsize = 37
+#                       ),
+#              widget.Battery(
+#                       foreground = foregroundColor,
+#                       background = backgroundColor 
+#                      ),
               widget.TextBox(
                        text='',
                        foreground = backgroundColor,
@@ -468,17 +468,17 @@ screens = [
                        foreground = foregroundColor,
                        background = backgroundColor 
                       ), 
-              widget.TextBox(
-                       text = '',
-                       background = foregroundColor,
-                       foreground = backgroundColor,
-                       padding = 0,
-                       fontsize = 37
-                       ),
-              widget.Battery(
-                       foreground = foregroundColor,
-                       background = backgroundColor 
-                      ),
+#              widget.TextBox(
+#                       text = '',
+#                       background = foregroundColor,
+#                       foreground = backgroundColor,
+#                       padding = 0,
+#                       fontsize = 37
+#                       ),
+#              widget.Battery(
+#                       foreground = foregroundColor,
+#                       background = backgroundColor 
+#                      ),
               widget.TextBox(
                        text='',
                        foreground = backgroundColor,
