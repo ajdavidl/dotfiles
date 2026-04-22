@@ -88,7 +88,7 @@ keys = [
     Key([mod], "F10", lazy.spawn("alacritty -e xrandr --output eDP-1 --brightness 0.8")),
     Key([mod], "F11", lazy.spawn("alacritty -e xrandr --output eDP-1 --brightness 1")),
     Key([mod], "F12", lazy.spawn("alacritty -e xrandr --output eDP-1 --brightness 1.2")),
-    
+
     # Start apps
     Key([mod], "q", lazy.spawn("alacritty -e vim .config/qtile/config.py")),
     Key([mod], "w", lazy.spawn('alacritty --hold -e curl wttr.in')),
@@ -135,7 +135,7 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume 0 +5dB")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume 0 -5dB")),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute 0 toggle")),
-    
+
     #Rofi
     Key([mod, "shift"], "Return", lazy.spawn("rofi -show run"), desc = "Launch primary launcher"),
 
@@ -171,7 +171,7 @@ keys.extend([
     Key([mod, "control"], "v", lazy.group['scratchpad'].dropdown_toggle('text_editor')),
     Key([mod, "control"], "e", lazy.group['scratchpad'].dropdown_toggle('file_manager')),
     Key([mod, "control"], "h", lazy.group['scratchpad'].dropdown_toggle('process_viewer')),
-])  
+])
 
 
 layouts = [
@@ -223,7 +223,7 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox(text = '',
+                widget.TextBox(text = '>',
                        background = foregroundColor,
                        foreground = backgroundColor,
                        padding = 0,
@@ -231,18 +231,18 @@ screens = [
                 widget.TextBox("Comandos: &lt;M-c&gt;", foreground=foregroundColor,background=backgroundColor),
                 widget.Systray(),
                 widget.TextBox(
-                       text = '',
+                       text = '>',
                        background = foregroundColor,
                        foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37),
-				widget.Net(interface = "enp59s0",
+				widget.Net(interface = "enp0s3",
                     format = '{down} ↓↑ {up}',
                     foreground = foregroundColor,
                     background = backgroundColor,
                     padding = 5),
 				widget.TextBox(
-                       text='',
+                       text='>',
                        background = foregroundColor,
                        foreground = backgroundColor,
                        padding = 0,
@@ -264,7 +264,7 @@ screens = [
                        background = backgroundColor
                        ),
               widget.TextBox(
-                       text = '',
+                       text = '>',
                        background = foregroundColor,
                        foreground = backgroundColor,
                        padding = 0,
@@ -284,7 +284,7 @@ screens = [
                        padding = 5
                        ),
               widget.TextBox(
-                       text = '',
+                       text = '>',
                        background = foregroundColor,
                        foreground = backgroundColor,
                        padding = 0,
@@ -292,38 +292,38 @@ screens = [
                        ),
               widget.CPU(
                        foreground = foregroundColor,
-                       background = backgroundColor 
+                       background = backgroundColor
                       ),
-              widget.ThermalSensor(
-                       tag_sensor = "Core 0",
-                       foreground = foregroundColor,
-                       background = backgroundColor 
-                      ),
-              widget.ThermalSensor(
-                       tag_sensor = "Core 1",
-                       foreground = foregroundColor,
-                       background = backgroundColor 
-                      ),
-              widget.ThermalSensor(
-                       tag_sensor = "Core 2",
-                       foreground = foregroundColor,
-                       background = backgroundColor 
-                      ),
-              widget.ThermalSensor(
-                       tag_sensor = "Core 3",
-                       foreground = foregroundColor,
-                       background = backgroundColor 
-                      ),
-              widget.ThermalSensor(
-                       tag_sensor = "Core 4",
-                       foreground = foregroundColor,
-                       background = backgroundColor 
-                      ),
-              widget.ThermalSensor(
-                       tag_sensor = "Core 5",
-                       foreground = foregroundColor,
-                       background = backgroundColor 
-                      ), 
+#              widget.ThermalSensor(
+#                       tag_sensor = "Core 0",
+#                       foreground = foregroundColor,
+#                       background = backgroundColor
+#                      ),
+#              widget.ThermalSensor(
+#                       tag_sensor = "Core 1",
+#                       foreground = foregroundColor,
+#                       background = backgroundColor
+#                      ),
+#              widget.ThermalSensor(
+#                       tag_sensor = "Core 2",
+#                       foreground = foregroundColor,
+#                       background = backgroundColor
+#                      ),
+#              widget.ThermalSensor(
+#                       tag_sensor = "Core 3",
+#                       foreground = foregroundColor,
+#                       background = backgroundColor
+#                      ),
+#              widget.ThermalSensor(
+#                       tag_sensor = "Core 4",
+#                       foreground = foregroundColor,
+#                       background = backgroundColor
+#                      ),
+#              widget.ThermalSensor(
+#                       tag_sensor = "Core 5",
+#                       foreground = foregroundColor,
+#                       background = backgroundColor
+#                      ),
 #              widget.TextBox(
 #                       text = '',
 #                       background = foregroundColor,
@@ -333,10 +333,10 @@ screens = [
 #                       ),
 #              widget.Battery(
 #                       foreground = foregroundColor,
-#                       background = backgroundColor 
+#                       background = backgroundColor
 #                      ),
               widget.TextBox(
-                       text='',
+                       text='>',
                        foreground = backgroundColor,
                        background = foregroundColor,
                        padding = 0,
@@ -391,7 +391,7 @@ screens = [
                        foreground = backgroundColor,
                        padding = 0,
                        fontsize = 37),
-                widget.TextBox("Comandos: &lt;M-c&gt;", 
+                widget.TextBox("Comandos: &lt;M-c&gt;",
                        background = backgroundColor,
                        foreground = foregroundColor),
                 widget.TextBox(
@@ -434,38 +434,38 @@ screens = [
                        ),
               widget.CPU(
                        foreground = foregroundColor,
-                       background = backgroundColor 
+                       background = backgroundColor
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 0",
                        foreground = foregroundColor,
-                       background = backgroundColor 
+                       background = backgroundColor
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 1",
                        foreground = foregroundColor,
-                       background = backgroundColor 
+                       background = backgroundColor
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 2",
                        foreground = foregroundColor,
-                       background = backgroundColor 
+                       background = backgroundColor
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 3",
                        foreground = foregroundColor,
-                       background = backgroundColor 
+                       background = backgroundColor
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 4",
                        foreground = foregroundColor,
-                       background = backgroundColor 
+                       background = backgroundColor
                       ),
               widget.ThermalSensor(
                        tag_sensor = "Core 5",
                        foreground = foregroundColor,
-                       background = backgroundColor 
-                      ), 
+                       background = backgroundColor
+                      ),
 #              widget.TextBox(
 #                       text = '',
 #                       background = foregroundColor,
@@ -475,7 +475,7 @@ screens = [
 #                       ),
 #              widget.Battery(
 #                       foreground = foregroundColor,
-#                       background = backgroundColor 
+#                       background = backgroundColor
 #                      ),
               widget.TextBox(
                        text='',
