@@ -183,9 +183,9 @@ _Pacdiff() {
 }
 
 # PYENV ---------------
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init --path)"
 
 #------------------------------------------------------------
 
@@ -196,7 +196,7 @@ eval "$(pyenv init --path)"
 # alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 # alias pacdiff=_Pacdiff
 ################################################################################
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
 alias config='/usr/bin/git --git-dir=/home/usuario/.cfg/ --work-tree=/home/usuario'
 
 # function from https://github.com/ChrisTitusTech/scripts/blob/master/fancy-bash-promt.sh
